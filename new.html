@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 1st Monthsary</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <div class="text">
+                <p>Happy 23th Birthday my baby ate Eleona Pagdanganan!</p>
+            </div>
+        </div>
+        <div class="slide fade">
+            <div class="text">
+                <p>Sorry kasi ito lang kaya kong ibigay na gift sayo hehehehe.</p>
+            </div>
+        </div>
+        <div class="slide fade">
+            <div class="text">
+                <p>Wish ko lang eh makamit mo mga pangarap mo (kasama ako hihihi), and wish ko rin na ibigay sayo ni Lord yung strength, love, forgiveness, and health.</p>
+            </div>
+        </div>
+        <div class="slide fade">
+            <div class="text">
+                <p>Thank you for being there for me especially at my lowest. HAPPY BIRTHDAY ATE KO!</p>
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("slide");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          slides[slideIndex-1].style.display = "block";  
+        }
+    </script>
+</body>
+</html>
